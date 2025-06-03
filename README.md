@@ -1,11 +1,11 @@
-# ExCharts
+# ExChartz
 
 High-performance, customizable chart components for React Native and Expo built with Skia and Reanimated.
 
 ## Features
 
-- 🚀 **High Performance**: Built with `react-native-skia` for 60fps animations
-- 📊 **Multiple Chart Types**: Area, Line, Bar, and Cartesian charts
+- 🚀 **High Performance**: Built with `react-native-skia` for high performance
+- 📊 **Multiple Chart Types**: Area, Line, Bar, Pie, Radar charts
 - 🎨 **Fully Customizable**: Colors, animations, styling, and layout options
 - 📱 **Cross Platform**: Works on iOS, Android, and Expo
 - 🔄 **Smooth Animations**: Powered by `react-native-reanimated`
@@ -16,12 +16,12 @@ High-performance, customizable chart components for React Native and Expo built 
 ## Installation
 
 ```bash
-npm install excharts
+npm install exchartz
 ```
 
 ### Peer Dependencies
 
-ExCharts requires the following peer dependencies:
+ExChartz requires the following peer dependencies:
 
 ```bash
 npm install react-native-skia react-native-reanimated d3
@@ -44,7 +44,7 @@ The `CartesianChart` component provides the coordinate system and axes for other
 
 ```tsx
 import React from "react";
-import { CartesianChart, LineChart } from "excharts";
+import { CartesianChart, LineChart } from "exchartz";
 
 const data = [
   { x: 0, y: 10 },
@@ -73,7 +73,7 @@ export default function BasicChart() {
 
 ```tsx
 import React from "react";
-import { CartesianChart, LineChart } from "excharts";
+import { CartesianChart, LineChart } from "exchartz";
 import * as d3 from "d3";
 
 const data = [
@@ -104,7 +104,7 @@ export default function LineChartExample() {
 
 ```tsx
 import React from "react";
-import { CartesianChart, AreaChart } from "excharts";
+import { CartesianChart, AreaChart } from "exchartz";
 
 const data = [
   { x: 0, y: 10 },
@@ -133,7 +133,7 @@ export default function AreaChartExample() {
 
 ```tsx
 import React from "react";
-import { CartesianChart, BarChart } from "excharts";
+import { CartesianChart, BarChart } from "exchartz";
 
 const data = [
   { x: "Jan", y: 10 },
@@ -243,7 +243,7 @@ interface ChartDataPoint {
 
 ```tsx
 import React from "react";
-import { CartesianChart, LineChart, AreaChart } from "excharts";
+import { CartesianChart, LineChart, AreaChart } from "exchartz";
 
 const lineData = [
   { x: 0, y: 10 },
@@ -298,7 +298,7 @@ export default function CombinedChart() {
 
 ```tsx
 import React from "react";
-import { CartesianChart, BarChart } from "excharts";
+import { CartesianChart, BarChart } from "exchartz";
 import * as d3 from "d3";
 
 const data = [
@@ -342,7 +342,7 @@ export default function AnimatedBarChart() {
 
 ```tsx
 import React from "react";
-import { CartesianChart, LineChart } from "excharts";
+import { CartesianChart, LineChart } from "exchartz";
 import * as d3 from "d3";
 
 const timeData = [
@@ -386,12 +386,13 @@ export default function TimeSeriesChart() {
 2. **Animation Usage**: Use animations sparingly on lower-end devices
 3. **Memoization**: Wrap chart components in `React.memo()` when data doesn't change frequently
 4. **Reanimated Worklets**: Chart animations run on the UI thread for optimal performance
+5. **List Size Changes**: Varying the data size while animating can cause unexpected results
 
 ### Memory Management
 
 ```tsx
 import React, { useMemo } from "react";
-import { CartesianChart, LineChart } from "excharts";
+import { CartesianChart, LineChart } from "exchartz";
 
 export default function OptimizedChart({ rawData }) {
   // Memoize processed data to avoid recalculations
@@ -477,8 +478,8 @@ We welcome contributions! Please follow these guidelines:
 ### Development Setup
 
 ```bash
-git clone https://github.com/your-username/excharts.git
-cd excharts
+git clone https://github.com/mzkux/exchartz.git
+cd exchartz
 npm install
 npm run build
 npm test
@@ -497,10 +498,10 @@ MIT License - see [LICENSE](LICENSE) file for details.
 
 ## Support
 
-- 📖 [Documentation](https://github.com/your-username/excharts)
-- 🐛 [Issue Tracker](https://github.com/your-username/excharts/issues)
-- 💬 [Discussions](https://github.com/your-username/excharts/discussions)
+- 📖 [Documentation](https://github.com/mzkux/exchartz)
+- 🐛 [Issue Tracker](https://github.com/mzkux/exchartz/issues)
+- 💬 [Discussions](https://github.com/mzkux/exchartz/discussions)
 
 ---
 
-Built with ❤️ using React Native Skia and Reanimated
+Built using React Native Skia and Reanimated

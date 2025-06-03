@@ -1,6 +1,6 @@
 {
-  "name": "@zain_raisan/excharts",
-  "version": "1.0.0",
+  "name": "exchartz",
+  "version": "1.0.1",
   "description": "High-performance Skia chart components built specifically for React Native and Expo projects",
   "keywords": [
     "charts",
